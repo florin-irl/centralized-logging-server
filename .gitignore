@@ -1,0 +1,5 @@
+# Ignore all log files
+cls-logstash/logs/*
+
+# But keep this placeholder
+!cls-logstash/logs/.gitkeep

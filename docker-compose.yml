@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+    logstash:
+        build:
+            context: ./cls-logstash
+        ports:
+            - "5044:5044"
+        container_name: cls-logstash
+        volumes:
+            - ./cls-logstash/logs:/usr/share/logstash/logs
