@@ -1,0 +1,22 @@
+[
+  {
+    "ContainingType": "dotnet_service.Controllers.TestController",
+    "Method": "ErrorTest",
+    "RelativePath": "Test/error",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "dotnet_service.Controllers.TestController",
+    "Method": "Ping",
+    "RelativePath": "Test/ping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
