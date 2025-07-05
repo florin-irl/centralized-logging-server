@@ -1,6 +1,10 @@
 using Serilog.Formatting.Json;
 using Serilog;
 using Serilog.Sinks.Network;
+using dotnet_service.Data;
+using Microsoft.EntityFrameworkCore;
+using dotnet_service.Repositories;
+using dotnet_service.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +18,13 @@ Log.Logger = new LoggerConfiguration()
 builder.Host.UseSerilog();
 builder.Services.AddControllers();
 
+builder.Services.AddScoped<ILogRepository, LogRepository>();
+builder.Services.AddScoped<ILogService, LogService>();
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

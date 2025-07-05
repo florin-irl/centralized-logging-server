@@ -1,5 +1,63 @@
 [
   {
+    "ContainingType": "dotnet_service.Controllers.LogsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Logs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "dotnet_service.Controllers.LogsController",
+    "Method": "Create",
+    "RelativePath": "api/Logs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "dotnet_service.DTOs.CreateLogDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "dotnet_service.Controllers.LogsController",
+    "Method": "GetById",
+    "RelativePath": "api/Logs/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "dotnet_service.Controllers.LogsController",
+    "Method": "Delete",
+    "RelativePath": "api/Logs/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "dotnet_service.Controllers.TestController",
     "Method": "ErrorTest",
     "RelativePath": "Test/error",

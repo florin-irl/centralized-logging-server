@@ -3,12 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\controllers\\logscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|solutionrelative:controllers\\logscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\services\\logservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|solutionrelative:services\\logservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|solutionrelative:controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\services\\ilogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|solutionrelative:services\\ilogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\repositories\\logrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|solutionrelative:repositories\\logrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\repositories\\ilogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|solutionrelative:repositories\\ilogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\dtos\\logdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|solutionrelative:dtos\\logdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\dtos\\createlogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|solutionrelative:dtos\\createlogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\models\\logentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|solutionrelative:models\\logentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AD87B0D-7251-4324-A1DF-06E2FC8CE651}|dotnet-service.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -22,37 +62,167 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LogsController.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Controllers\\LogsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LogsController.cs",
+              "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Controllers\\LogsController.cs",
+              "RelativeToolTip": "Controllers\\LogsController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAswDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T12:22:23.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "LogService.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Services\\LogService.cs",
+              "RelativeDocumentMoniker": "Services\\LogService.cs",
+              "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Services\\LogService.cs",
+              "RelativeToolTip": "Services\\LogService.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAIwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T12:21:57.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ILogService.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Services\\ILogService.cs",
+              "RelativeDocumentMoniker": "Services\\ILogService.cs",
+              "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Services\\ILogService.cs",
+              "RelativeToolTip": "Services\\ILogService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T12:21:33.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LogRepository.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Repositories\\LogRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\LogRepository.cs",
+              "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Repositories\\LogRepository.cs",
+              "RelativeToolTip": "Repositories\\LogRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T12:20:57.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ILogRepository.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Repositories\\ILogRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ILogRepository.cs",
+              "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Repositories\\ILogRepository.cs",
+              "RelativeToolTip": "Repositories\\ILogRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T12:20:37.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LogDto.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\DTOs\\LogDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\LogDto.cs",
+              "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\DTOs\\LogDto.cs",
+              "RelativeToolTip": "DTOs\\LogDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T12:19:18.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateLogDto.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\DTOs\\CreateLogDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\CreateLogDto.cs",
+              "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\DTOs\\CreateLogDto.cs",
+              "RelativeToolTip": "DTOs\\CreateLogDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T12:19:03.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LogEntry.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Models\\LogEntry.cs",
+              "RelativeDocumentMoniker": "Models\\LogEntry.cs",
+              "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Models\\LogEntry.cs",
+              "RelativeToolTip": "Models\\LogEntry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T12:17:34.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-05T12:10:41.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T12:09:06.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "TestController.cs",
               "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Controllers\\TestController.cs",
               "RelativeDocumentMoniker": "Controllers\\TestController.cs",
               "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Controllers\\TestController.cs",
               "RelativeToolTip": "Controllers\\TestController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-04T13:38:15.315Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAADwvywAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-04T13:30:26.382Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\dotnet-service\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -60,8 +230,7 @@
               "RelativeToolTip": "Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-04T13:30:04.28Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-04T13:30:04.28Z"
             }
           ]
         }
