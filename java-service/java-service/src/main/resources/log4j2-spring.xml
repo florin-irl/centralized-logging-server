@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+    <Appenders>
+        <!-- File Logging -->
+        <RollingFile name="LocalFile" fileName="logs/java-service.log"
+                     filePattern="logs/java-service-%d{yyyy-MM-dd}.log.gz">
+            <JsonLayout eventEol="true" compact="true">
+                <KeyValuePair key="service" value="java-service"/>
+            </JsonLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+        </RollingFile>
+
+        <!-- Logstash TCP Socket Appender -->
+        <Socket name="Logstash" host="localhost" port="5044" protocol="TCP">
+            <JsonLayout eventEol="true" compact="true">
+                <KeyValuePair key="service" value="java-service"/>
+            </JsonLayout>
+        </Socket>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="LocalFile"/>
+            <AppenderRef ref="Logstash"/>
+        </Root>
+    </Loggers>
+</Configuration>
