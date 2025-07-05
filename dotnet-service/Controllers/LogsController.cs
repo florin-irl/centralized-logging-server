@@ -29,11 +29,11 @@ namespace dotnet_service.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            _logger.LogInformation("GET /api/logs/{Id} called.", id);
+            _logger.LogInformation("GET /api/logs/{id} called.", id);
             var log = await _logService.GetByIdAsync(id);
             if (log == null)
             {
-                _logger.LogWarning("GET /api/logs/{Id} returned 404.", id);
+                _logger.LogWarning("GET /api/logs/{id} returned 404.", id);
                 return NotFound();
             }
             return Ok(log);
@@ -42,7 +42,7 @@ namespace dotnet_service.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateLogDto dto)
         {
-            _logger.LogInformation("POST /api/logs called with body: {@Dto}", dto);
+            _logger.LogInformation("POST /api/logs called with body: {@dto}", dto);
             await _logService.CreateAsync(dto);
             return Created("", null);
         }
@@ -50,7 +50,7 @@ namespace dotnet_service.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            _logger.LogInformation("DELETE /api/logs/{Id} called.", id);
+            _logger.LogInformation("DELETE /api/logs/{id} called.", id);
             await _logService.DeleteAsync(id);
             return NoContent();
         }
