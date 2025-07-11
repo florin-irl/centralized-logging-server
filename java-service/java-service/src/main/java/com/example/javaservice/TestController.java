@@ -12,7 +12,7 @@ public class TestController {
 
     @GetMapping("/test")
     public String testLogging() {
-        logger.info("Test log message from Spring Boot Java service.");
+        logger.info("THIS IS MY TEST.");
         return "Log sent!";
     }
 }
