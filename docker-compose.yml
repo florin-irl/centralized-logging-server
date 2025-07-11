@@ -1,11 +1,43 @@
 version: '3.8'
 
 services:
+    elasticsearch:
+        build:
+            context: ./elasticsearch
+        container_name: elasticsearch
+        environment:
+            - discovery.type=single-node
+            - xpack.security.enabled=false
+        ports:
+            - "9200:9200"
+            - "9300:9300"
+        networks:
+            - logging-net
+
+    kibana:
+        build:
+            context: ./kibana
+        container_name: kibana
+        ports:
+            - "5601:5601"
+        environment:
+            - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+        depends_on:
+            - elasticsearch
+        networks:
+            - logging-net
+
     logstash:
         build:
             context: ./cls-logstash
+        container_name: cls-logstash
         ports:
             - "5044:5044"
-        container_name: cls-logstash
         volumes:
             - ./cls-logstash/logs:/usr/share/logstash/logs
+        networks:
+            - logging-net
+
+networks:
+    logging-net:
+        driver: bridge

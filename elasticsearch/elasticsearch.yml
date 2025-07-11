@@ -1,0 +1,4 @@
+cluster.name: "centralized-logging"
+node.name: "node-1"
+discovery.type: single-node
+xpack.security.enabled: false
