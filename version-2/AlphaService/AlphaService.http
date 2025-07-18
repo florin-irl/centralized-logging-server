@@ -1,0 +1,6 @@
+@AlphaService_HostAddress = http://localhost:5198
+
+GET {{AlphaService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

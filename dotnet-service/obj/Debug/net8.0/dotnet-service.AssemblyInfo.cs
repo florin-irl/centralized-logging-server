@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dotnet-service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ecf93604600e793079f45a7d933b4031a54dde5d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28c165601382fc0779158b1b51a86f764a76e1aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("dotnet-service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dotnet-service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

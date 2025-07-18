@@ -35,6 +35,8 @@ services:
             - "5044:5044"
         volumes:
             - ./cls-logstash/logs:/usr/share/logstash/logs
+            - ./cls-logstash/pipeline:/usr/share/logstash/pipeline
+
         networks:
             - logging-net
 
