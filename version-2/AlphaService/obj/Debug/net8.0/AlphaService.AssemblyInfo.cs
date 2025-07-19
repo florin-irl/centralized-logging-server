@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AlphaService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28c165601382fc0779158b1b51a86f764a76e1aa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0653c2c441ba8b1b2d3f5aeb9ff82cae99871088")]
 [assembly: System.Reflection.AssemblyProductAttribute("AlphaService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AlphaService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
