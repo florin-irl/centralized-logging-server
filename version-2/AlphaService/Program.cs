@@ -1,20 +1,24 @@
 ﻿using Serilog;
+using Serilog.Context;
+using Serilog.Events;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // ✅ SIMPLE TEXT LOGGING
 Log.Logger = new LoggerConfiguration()
     .Enrich.FromLogContext()
-    .Enrich.WithProperty("ServiceName", "AlphaService")
+    .Enrich.WithProperty("Service", "AlphaService")
+    .MinimumLevel.Override("Microsoft", LogEventLevel.Warning) // Suppress noisy ASP.NET logs
+    .MinimumLevel.Debug() // Keep your detailed logs
+    .WriteTo.Console(new Serilog.Formatting.Json.JsonFormatter()) // JSON for console (useful if shipping via Filebeat)
     .WriteTo.File(
-        "Logs/alpha-service.log",     // Log file path
-        rollingInterval: RollingInterval.Day, // New file daily
-        retainedFileCountLimit: 7,    // Keep last 7 days
-        outputTemplate: "[{Timestamp:yyyy-MM-dd HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}"
+        new Serilog.Formatting.Json.JsonFormatter(),
+        "Logs/alpha-service.json",
+        rollingInterval: RollingInterval.Day
     )
-    .WriteTo.Console() // Optional: see logs in console
-    .MinimumLevel.Debug() // Log everything from Debug and above
     .CreateLogger();
+
+
 
 builder.Host.UseSerilog();
 
@@ -33,6 +37,18 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// ✅ Serilog request logging middleware (optional but recommended)
+app.UseSerilogRequestLogging();
+
+// ✅ Correlation ID middleware (place it HERE)
+app.Use(async (context, next) =>
+{
+    var correlationId = context.TraceIdentifier; // ASP.NET built-in unique request ID
+    LogContext.PushProperty("CorrelationId", correlationId);
+    await next();
+});
+
 app.UseAuthorization();
 app.MapControllers();
 
