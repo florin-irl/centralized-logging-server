@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jsP67c/BVQk=",
+  "dgSpecHash": "wUz/Cw5uT5A=",
   "success": true,
   "projectFilePath": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\BetaService\\BetaService.csproj",
   "expectedPackageFiles": [
@@ -48,6 +48,7 @@
     "C:\\Users\\roman\\.nuget\\packages\\serilog.sinks.console\\6.0.0\\serilog.sinks.console.6.0.0.nupkg.sha512",
     "C:\\Users\\roman\\.nuget\\packages\\serilog.sinks.debug\\3.0.0\\serilog.sinks.debug.3.0.0.nupkg.sha512",
     "C:\\Users\\roman\\.nuget\\packages\\serilog.sinks.file\\7.0.0\\serilog.sinks.file.7.0.0.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\serilog.sinks.network\\3.0.0\\serilog.sinks.network.3.0.0.nupkg.sha512",
     "C:\\Users\\roman\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "C:\\Users\\roman\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "C:\\Users\\roman\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",

@@ -15,6 +15,9 @@ Log.Logger = new LoggerConfiguration()
         new Serilog.Formatting.Json.JsonFormatter(),
         "Logs/alpha-service.json",
         rollingInterval: RollingInterval.Day
+    ).WriteTo.DurableHttpUsingFileSizeRolledBuffers(
+        requestUri: "http://localhost:8080",
+        batchFormatter: new Serilog.Sinks.Http.BatchFormatters.ArrayBatchFormatter()
     )
     .CreateLogger();
 

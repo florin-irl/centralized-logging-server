@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\BetaService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8299EDF6-C700-4EC4-B7CF-58021C46C6DD}|BetaService.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\version-2\\betaservice\\controllers\\phonescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8299EDF6-C700-4EC4-B7CF-58021C46C6DD}|BetaService.csproj|solutionrelative:controllers\\phonescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8299EDF6-C700-4EC4-B7CF-58021C46C6DD}|BetaService.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\version-2\\betaservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8299EDF6-C700-4EC4-B7CF-58021C46C6DD}|BetaService.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8299EDF6-C700-4EC4-B7CF-58021C46C6DD}|BetaService.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\version-2\\betaservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8299EDF6-C700-4EC4-B7CF-58021C46C6DD}|BetaService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8299EDF6-C700-4EC4-B7CF-58021C46C6DD}|BetaService.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\version-2\\betaservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8299EDF6-C700-4EC4-B7CF-58021C46C6DD}|BetaService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8299EDF6-C700-4EC4-B7CF-58021C46C6DD}|BetaService.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\version-2\\betaservice\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8299EDF6-C700-4EC4-B7CF-58021C46C6DD}|BetaService.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{8299EDF6-C700-4EC4-B7CF-58021C46C6DD}|BetaService.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\version-2\\betaservice\\controllers\\phonescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8299EDF6-C700-4EC4-B7CF-58021C46C6DD}|BetaService.csproj|solutionrelative:controllers\\phonescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8299EDF6-C700-4EC4-B7CF-58021C46C6DD}|BetaService.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\version-2\\betaservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8299EDF6-C700-4EC4-B7CF-58021C46C6DD}|BetaService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{8299EDF6-C700-4EC4-B7CF-58021C46C6DD}|BetaService.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\version-2\\betaservice\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8299EDF6-C700-4EC4-B7CF-58021C46C6DD}|BetaService.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8299EDF6-C700-4EC4-B7CF-58021C46C6DD}|BetaService.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\version-2\\betaservice\\models\\phone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,11 +38,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\BetaService\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\BetaService\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-19T21:57:29.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\BetaService\\appsettings.Development.json",
               "RelativeDocumentMoniker": "appsettings.Development.json",
@@ -46,12 +63,11 @@
               "RelativeToolTip": "appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-19T20:46:05.13Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-19T20:46:05.13Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "PhonesController.cs",
               "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\BetaService\\Controllers\\PhonesController.cs",
               "RelativeDocumentMoniker": "Controllers\\PhonesController.cs",
@@ -64,20 +80,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\BetaService\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\BetaService\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwDkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-18T12:30:05.477Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\BetaService\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -90,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\BetaService\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
@@ -102,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Phone.cs",
               "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\BetaService\\Models\\Phone.cs",
               "RelativeDocumentMoniker": "Models\\Phone.cs",
@@ -110,8 +126,7 @@
               "RelativeToolTip": "Models\\Phone.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T12:26:42.142Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-18T12:26:42.142Z"
             }
           ]
         }

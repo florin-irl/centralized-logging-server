@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+    logstash:
+        image: docker.elastic.co/logstash/logstash:8.13.0
+        container_name: logstash
+        ports:
+            - "5044:5044" # Beats (not used now, but open if needed later)
+            - "5000:5000" # TCP input for Beta
+            - "9600:9600" # Monitoring API
+            - "8080:8080" # HTTP input for Alpha
+        volumes:
+            - ./logstash/pipeline:/usr/share/logstash/pipeline
+            - ./logstash/logs:/logs

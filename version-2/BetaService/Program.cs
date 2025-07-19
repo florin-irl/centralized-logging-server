@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Serilog.Context;
 using Serilog.Events;
+using Serilog.Sinks.Network;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,7 @@ Log.Logger = new LoggerConfiguration()
         "Logs/beta-service.json",
         rollingInterval: RollingInterval.Day
     )
+    .WriteTo.TCPSink("tcp://localhost:5000")
     .CreateLogger();
 
 builder.Host.UseSerilog();

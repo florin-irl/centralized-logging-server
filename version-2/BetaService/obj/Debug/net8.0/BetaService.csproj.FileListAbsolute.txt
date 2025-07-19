@@ -147,3 +147,5 @@ C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\BetaServ
 C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\BetaService\bin\Debug\net8.0\Serilog.Sinks.Console.dll
 C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\BetaService\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
 C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\BetaService\bin\Debug\net8.0\Serilog.Sinks.File.dll
+C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\BetaService\bin\Debug\net8.0\Logs\beta-service20250719.json
+C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\BetaService\bin\Debug\net8.0\Serilog.Sinks.Network.dll

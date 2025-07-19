@@ -59,3 +59,4 @@ C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\AlphaSer
 C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\AlphaService\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\AlphaService\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\AlphaService\bin\Debug\net8.0\Logs\alpha-service20250719.json
+C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\AlphaService\bin\Debug\net8.0\Serilog.Sinks.Http.dll
