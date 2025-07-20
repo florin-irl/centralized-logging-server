@@ -21,7 +21,7 @@ services:
         environment:
             ELASTICSEARCH_HOSTS: "http://elasticsearch:9200"
             ELASTICSEARCH_USERNAME: "kibana_system"
-            ELASTICSEARCH_PASSWORD: "" # Not needed, but must be set empty
+            ELASTICSEARCH_PASSWORD: ""
             KBN_INTERACTIVE_SETUP_ENABLED: "false"
         depends_on:
             - elasticsearch
@@ -30,12 +30,24 @@ services:
         image: docker.elastic.co/logstash/logstash:8.13.0
         container_name: logstash
         ports:
-            - "5044:5044"
-            - "5000:5000"
-            - "9600:9600"
-            - "8080:8080"
+            - "5044:5044" # Beats input
+            - "5000:5000" # TCP input (legacy)
+            - "9600:9600" # Logstash monitoring
+            - "8080:8080" # HTTP input (legacy)
         volumes:
             - ./logstash/pipeline:/usr/share/logstash/pipeline
             - ./logstash/logs:/logs
         depends_on:
             - elasticsearch
+
+    filebeat:
+        image: docker.elastic.co/beats/filebeat:8.13.0
+        container_name: filebeat
+        user: root
+        command: [ "--strict.perms=false" ]
+        volumes:
+            - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+            - ./charlie/logs:/logs/charlie:ro
+        depends_on:
+            - logstash
+        restart: unless-stopped

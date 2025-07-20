@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <!-- ✅ Console output -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <JsonLayout
+                    complete="false"
+                    compact="true"
+                    eventEol="true"
+                    properties="true"
+                    objectMessageAsJsonObject="true"
+                    includeStacktrace="true"
+                    includeThreadContext="true"
+                    includeTimeMillis="true"
+                    timestampFormat="ISO8601">
+                <KeyValuePair key="@version" value="1"/>
+                <KeyValuePair key="service" value="CharlieService"/>
+                <KeyValuePair key="input_source" value="filebeat"/>
+            </JsonLayout>
+        </Console>
+
+        <!-- ✅ File output -->
+        <File name="JsonFile" fileName="logs/charlie-service.log" append="true">
+            <JsonLayout
+                    complete="false"
+                    compact="true"
+                    eventEol="true"
+                    properties="true"
+                    objectMessageAsJsonObject="true"
+                    includeStacktrace="true"
+                    includeThreadContext="true"
+                    includeTimeMillis="true"
+                    timestampFormat="ISO8601">
+                <KeyValuePair key="@version" value="1"/>
+                <KeyValuePair key="service" value="CharlieService"/>
+                <KeyValuePair key="input_source" value="filebeat"/>
+            </JsonLayout>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="com.example.charlie" level="info" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="JsonFile"/>
+        </Logger>
+
+        <Root level="warn">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

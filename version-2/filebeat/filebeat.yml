@@ -1,0 +1,12 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /logs/charlie/*.log
+    json.keys_under_root: true
+    json.add_error_key: true
+    fields:
+      source: CharlieService
+
+output.logstash:
+  hosts: ["logstash:5044"]
