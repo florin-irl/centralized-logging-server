@@ -1,21 +1,22 @@
-using BetaService.Data;
-using Microsoft.EntityFrameworkCore;
-using Serilog;
+﻿using Serilog;
 using Serilog.Context;
 using Serilog.Events;
+using Serilog.Formatting.Json;
+using BetaService.Data;
+using Microsoft.EntityFrameworkCore;
 using Serilog.Sinks.Network;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ? SERILOG CONFIGURATION (Consistent with AlphaService)
 Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+    .MinimumLevel.Debug()
     .Enrich.FromLogContext()
-    .Enrich.WithProperty("Service", "BetaService") // Distinguish from Alpha
-    .MinimumLevel.Override("Microsoft", LogEventLevel.Warning) // Suppress noisy EF Core & ASP.NET logs
-    .MinimumLevel.Debug() // Keep CRUD-level logs
-    .WriteTo.Console(new Serilog.Formatting.Json.JsonFormatter()) // JSON-friendly for ELK
+    .Enrich.WithProperty("Service", "BetaService")
+    .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName)
+    .WriteTo.Console(new JsonFormatter(renderMessage: true))
     .WriteTo.File(
-        new Serilog.Formatting.Json.JsonFormatter(),
+        new JsonFormatter(renderMessage: true),
         "Logs/beta-service.json",
         rollingInterval: RollingInterval.Day
     )
@@ -24,12 +25,16 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
-// ? DATABASE
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// ? CONTROLLERS & SWAGGER
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(opts =>
+    {
+        // ✅ FORCE PascalCase like Alpha
+        opts.JsonSerializerOptions.PropertyNamingPolicy = null;
+    });
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -43,17 +48,25 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// ? REQUEST LOGGING & CORRELATION ID (Optional but recommended)
-app.UseSerilogRequestLogging();
+app.UseSerilogRequestLogging(opts =>
+{
+    opts.EnrichDiagnosticContext = (diag, ctx) =>
+    {
+        diag.Set("Service", "BetaService");
+        diag.Set("CorrelationId", ctx.TraceIdentifier);
+        diag.Set("RequestMethod", ctx.Request.Method);
+        diag.Set("RequestPath", ctx.Request.Path);
+    };
+});
+
 app.Use(async (context, next) =>
 {
-    var correlationId = context.TraceIdentifier;
-    LogContext.PushProperty("CorrelationId", correlationId);
+    LogContext.PushProperty("CorrelationId", context.TraceIdentifier);
     await next();
 });
 
 app.UseAuthorization();
 app.MapControllers();
-
 app.Lifetime.ApplicationStopped.Register(Log.CloseAndFlush);
+
 app.Run();

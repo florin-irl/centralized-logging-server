@@ -21,25 +21,32 @@ namespace AlphaService.Controllers
         // ✅ Helper method to log request and response
         private void LogRequestAndResponse(string method, string url, object? requestBody, HttpResponseMessage response, string responseData)
         {
-            Log.Information(
-                "HTTP {Method} | URL: {Url} | RequestBody: {RequestBody} | ResponseStatus: {StatusCode} | ResponseBody: {ResponseBody}",
-                method,
-                url,
-                requestBody != null ? JsonSerializer.Serialize(requestBody) : "None",
-                (int)response.StatusCode,
-                responseData
-            );
+            object? parsedResponse;
+            try
+            {
+                parsedResponse = JsonSerializer.Deserialize<object>(responseData);
+            }
+            catch
+            {
+                parsedResponse = responseData;
+            }
+
+            Log.ForContext("Method", method)
+               .ForContext("Url", url)
+               .ForContext("RequestBody", requestBody != null ? JsonSerializer.Serialize(requestBody) : "None")
+               .ForContext("StatusCode", (int)response.StatusCode)
+               .ForContext("ResponseBody", parsedResponse)
+               .Information("HTTP {Method} | URL: {Url} | Status: {StatusCode}");
         }
 
-        // ✅ Helper method to log exceptions
         private void LogError(string method, string url, object? requestBody, Exception ex)
         {
-            Log.Error(ex, "❌ ERROR during {Method} | URL: {Url} | RequestBody: {RequestBody}",
-                method,
-                url,
-                requestBody != null ? JsonSerializer.Serialize(requestBody) : "None"
-            );
+            Log.ForContext("Method", method)
+               .ForContext("Url", url)
+               .ForContext("RequestBody", requestBody != null ? JsonSerializer.Serialize(requestBody) : "None")
+               .Error(ex, "❌ ERROR during {Method} {Url}");
         }
+
 
         // GET: api/phones
         [HttpGet]

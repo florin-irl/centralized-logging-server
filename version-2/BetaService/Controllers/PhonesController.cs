@@ -21,26 +21,23 @@ namespace BetaService.Controllers
         // ✅ Helper method to log request and response
         private void LogRequestAndResponse(string method, string url, object? requestBody, int statusCode, object? responseData)
         {
-            Log.Information(
-                "HTTP {Method} | URL: {Url} | RequestBody: {RequestBody} | ResponseStatus: {StatusCode} | ResponseBody: {ResponseBody}",
-                method,
-                url,
-                requestBody != null ? JsonSerializer.Serialize(requestBody) : "None",
-                statusCode,
-                responseData != null ? JsonSerializer.Serialize(responseData) : "None"
-            );
+            Log.ForContext("Method", method)
+               .ForContext("Url", url)
+               .ForContext("RequestBody", requestBody != null ? JsonSerializer.Serialize(requestBody) : "None")
+               .ForContext("StatusCode", statusCode)
+               .ForContext("ResponseBody", responseData != null ? JsonSerializer.Serialize(responseData) : "None")
+               .Information("HTTP {Method} | URL: {Url} | Status: {StatusCode}");
         }
 
-        // ✅ Helper method to log exceptions
         private void LogError(string method, string url, object? requestBody, Exception ex)
         {
-            Log.Error(ex,
-                "❌ ERROR during {Method} | URL: {Url} | RequestBody: {RequestBody}",
-                method,
-                url,
-                requestBody != null ? JsonSerializer.Serialize(requestBody) : "None"
-            );
+            Log.ForContext("Method", method)
+               .ForContext("Url", url)
+               .ForContext("RequestBody", requestBody != null ? JsonSerializer.Serialize(requestBody) : "None")
+               .Error(ex, "❌ ERROR during {Method} {Url}");
         }
+
+
 
         // GET: api/phones
         [HttpGet]
