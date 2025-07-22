@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BetaService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85583c247a4961f10513877101d385ab6465e73f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76fabbc0536cbd814a35cb72107576fda1e4a55a")]
 [assembly: System.Reflection.AssemblyProductAttribute("BetaService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BetaService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

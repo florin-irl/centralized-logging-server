@@ -1,0 +1,4 @@
+2025/07/22 20:43:48 [notice] 27056#23176: signal process started
+2025/07/22 20:44:10 [notice] 36712#8604: signal process started
+2025/07/22 20:44:10 [error] 36712#8604: CreateFile() "C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\nginx/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2025/07/22 20:45:26 [notice] 15468#13644: signal process started

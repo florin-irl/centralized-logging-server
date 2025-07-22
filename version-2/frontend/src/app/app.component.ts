@@ -11,9 +11,6 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title(title: any) {
-      throw new Error('Method not implemented.');
-  }
   alpha = { phoneId: 0, phoneNr: '', entries: 1 };
   charlie = { phoneId: 0, phoneNr: '', entries: 1 };
 
@@ -33,14 +30,21 @@ export class AppComponent {
 
     const url =
       service === 'alpha'
-        ? 'http://localhost:8081/phones' // Change to actual Alpha endpoint
-        : 'http://localhost:8082/phones'; // Change to actual Charlie endpoint
+        ? 'https://localhost:7065/api/phones' // ✅ FIXED URL for Alpha
+        : 'http://localhost:8082/api/phones';
 
-    this.http.post(url, entries).subscribe({
-      next: () => alert(`${service.toUpperCase()} data sent successfully!`),
-      error: (err) => alert(`Error sending to ${service}: ${err.message}`)
+    entries.forEach((phone) => {
+      this.http.post(url, phone).subscribe({
+        next: () =>
+          console.log(`${service.toUpperCase()} sent:`, phone),
+        error: (err) =>
+          console.error(`Error sending to ${service}:`, err)
+      });
     });
+
+    alert(`${service.toUpperCase()} data sent successfully!`);
   }
+
 
   private generateEntries(form: { phoneId: number; phoneNr: string; entries: number }) {
     const list = [];

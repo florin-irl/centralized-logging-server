@@ -1,39 +1,58 @@
 <div class="page-container">
-  <!-- Alpha Service Form -->
-  <div class="card alpha-card">
-    <h3>Alpha Service</h3>
 
-    <label>Phone ID</label>
-    <input type="number" [(ngModel)]="alpha.phoneId" />
+  <!-- Title -->
+  <h1 class="page-title">Alpha-Charlie Dummy Interface</h1>
 
-    <label>Phone Number</label>
-    <input type="text" [(ngModel)]="alpha.phoneNr" />
+  <div class="form-container">
+    <!-- Alpha Service Form -->
+    <div class="card alpha-card">
+      <h3>Alpha Service</h3>
 
-    <label>Number of Entries</label>
-    <input type="number" [(ngModel)]="alpha.entries" />
+      <label>Phone ID</label>
+      <input type="number" [(ngModel)]="alpha.phoneId" />
 
-    <div class="button-group">
-      <button class="btn clear" (click)="clearForm('alpha')">CLEAR</button>
-      <button class="btn send" (click)="sendData('alpha')">SEND</button>
+      <label>Phone Number</label>
+      <input type="text" [(ngModel)]="alpha.phoneNr" />
+
+      <label>Number of Entries</label>
+      <input type="number" [(ngModel)]="alpha.entries" />
+
+      <div class="button-group">
+        <button class="btn clear" (click)="clearForm('alpha')">CLEAR</button>
+        <button class="btn send" (click)="sendData('alpha')">SEND</button>
+      </div>
     </div>
-  </div>
 
-  <!-- Charlie Service Form -->
-  <div class="card charlie-card">
-    <h3>Charlie Service</h3>
+    <!-- Charlie Service Form -->
+    <div class="card charlie-card">
+      <h3>Charlie Service</h3>
 
-    <label>Phone ID</label>
-    <input type="number" [(ngModel)]="charlie.phoneId" />
+      <label>Phone ID</label>
+      <input type="number" [(ngModel)]="charlie.phoneId" />
 
-    <label>Phone Number</label>
-    <input type="text" [(ngModel)]="charlie.phoneNr" />
+      <label>Phone Number</label>
+      <input type="text" [(ngModel)]="charlie.phoneNr" />
 
-    <label>Number of Entries</label>
-    <input type="number" [(ngModel)]="charlie.entries" />
+      <label>Number of Entries</label>
+      <input type="number" [(ngModel)]="charlie.entries" />
 
-    <div class="button-group">
-      <button class="btn clear" (click)="clearForm('charlie')">CLEAR</button>
-      <button class="btn send" (click)="sendData('charlie')">SEND</button>
+      <div class="button-group">
+        <button class="btn clear" (click)="clearForm('charlie')">CLEAR</button>
+        <button class="btn send" (click)="sendData('charlie')">SEND</button>
+      </div>
+    </div>
+
+    <!-- Explanation Section -->
+    <div class="usage-info">
+      <h4>How to Use</h4>
+      <p>
+        1. Fill in <strong>Phone ID</strong> and <strong>Phone Number</strong>.<br />
+        2. Choose how many entries to add in <strong>Number of Entries</strong>:<br />
+        &nbsp;&nbsp;• If set to 1 → Adds only the specified entry.<br />
+        &nbsp;&nbsp;• If greater than 1 → Adds the specified entry and the rest are randomly generated.<br />
+        3. Click <strong>SEND</strong> to send data to the respective service.<br />
+        4. Click <strong>CLEAR</strong> to reset the form fields.
+      </p>
     </div>
   </div>
 </div>

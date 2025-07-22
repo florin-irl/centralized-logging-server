@@ -1,13 +1,30 @@
 /* Page Layout */
 .page-container {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
+  flex-direction: column; /* Title at top */
+  align-items: center;
   padding: 50px;
   background: linear-gradient(135deg, #f0f4f8, #e6ecf3);
   min-height: 100vh;
   font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Title */
+.page-title {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Put forms + usage info side by side */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
 }
 
 /* Card Containers */
@@ -106,4 +123,35 @@ input:focus {
 }
 
 .charlie-card .btn.send:hover {
-  background: #
+  background: #1e7e34;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Explanation Section */
+.usage-info {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.usage-info h4 {
+  margin-bottom: 10px;
+  color: #007BFF;
+  font-weight: 600;
+}
+
+/* ✅ Responsive: Stack vertically on smaller screens */
+@media (max-width: 1024px) {
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

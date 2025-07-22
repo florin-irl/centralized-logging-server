@@ -31,6 +31,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -59,6 +69,9 @@ app.Use(async (context, next) =>
     LogContext.PushProperty("CorrelationId", context.TraceIdentifier);
     await next();
 });
+
+app.UseCors("AllowAll");
+
 
 app.UseAuthorization();
 app.MapControllers();
