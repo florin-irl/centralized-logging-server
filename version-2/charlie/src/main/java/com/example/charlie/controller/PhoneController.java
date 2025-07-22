@@ -7,8 +7,7 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.ThreadContext;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @RestController
 @RequestMapping("/api/phones")
@@ -58,6 +57,39 @@ public class PhoneController {
         clearLogContext();
         return "Phone added successfully!";
     }
+
+    @GetMapping("/health")
+    public Map<String, Object> healthCheck() {
+        String url = "/api/phones/health";
+        Map<String, Object> result = new HashMap<>();
+        try {
+            // Just attempt a simple DB call to check connectivity
+            boolean dbHealthy = !phoneRepository.findAll().isEmpty() || true; // If DB empty, still true
+
+            result.put("service", "CharlieService");
+            result.put("status", dbHealthy ? "Healthy" : "Degraded");
+            result.put("database", dbHealthy ? "Connected" : "Not Reachable");
+            result.put("timestamp", new Date());
+
+            enrichLogContext("GET", url, 200);
+            log.info("Health check passed");
+            clearLogContext();
+
+            return result;
+        } catch (Exception ex) {
+            result.put("service", "CharlieService");
+            result.put("status", "Unhealthy");
+            result.put("database", "Not Reachable");
+            result.put("timestamp", new Date());
+
+            enrichLogContext("GET", url, 500);
+            log.error("❌ ERROR during health check", ex);
+            clearLogContext();
+
+            return result;
+        }
+    }
+
 
     @PutMapping("/{id}")
     public String updatePhone(@PathVariable int id, @RequestBody Phone phone) {

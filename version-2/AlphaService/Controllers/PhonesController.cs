@@ -18,6 +18,18 @@ namespace AlphaService.Controllers
             _betaBaseUrl = configuration["BetaService:BaseUrl"];
         }
 
+        [HttpGet("/health")]
+        public IActionResult HealthCheck()
+        {
+            return Ok(new
+            {
+                service = "AlphaService",
+                status = "UP",
+                timestamp = DateTime.UtcNow
+            });
+        }
+
+
         // ✅ Helper method to log request and response
         private void LogRequestAndResponse(string method, string url, object? requestBody, HttpResponseMessage response, string responseData)
         {

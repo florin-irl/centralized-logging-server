@@ -1,6 +1,16 @@
 [
   {
     "ContainingType": "BetaService.Controllers.PhonesController",
+    "Method": "HealthCheck",
+    "RelativePath": "api/health",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BetaService.Controllers.PhonesController",
     "Method": "GetPhones",
     "RelativePath": "api/Phones",
     "HttpMethod": "GET",

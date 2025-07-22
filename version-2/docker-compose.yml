@@ -53,3 +53,14 @@ services:
         depends_on:
             - logstash
         restart: unless-stopped
+
+    heartbeat:
+        image: docker.elastic.co/beats/heartbeat:8.13.0
+        container_name: heartbeat
+        user: root
+        command: [ "--strict.perms=false" ]
+        volumes:
+            - ./heartbeat/heartbeat.yml:/usr/share/heartbeat/heartbeat.yml:ro
+        depends_on:
+            - elasticsearch
+        restart: unless-stopped

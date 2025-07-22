@@ -18,6 +18,42 @@ namespace BetaService.Controllers
             _context = context;
         }
 
+        [HttpGet("/api/health")]
+        public async Task<IActionResult> HealthCheck()
+        {
+            string url = $"{Request.Scheme}://{Request.Host}{Request.Path}";
+            try
+            {
+                // Simple DB check: just ensure DB is reachable
+                bool dbHealthy = await _context.Database.CanConnectAsync();
+
+                var result = new
+                {
+                    service = "BetaService",
+                    status = dbHealthy ? "Healthy" : "Degraded",
+                    database = dbHealthy ? "Connected" : "Not Reachable",
+                    timestamp = DateTime.UtcNow
+                };
+
+                LogRequestAndResponse("GET", url, null, 200, result);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                LogError("GET", url, null, ex);
+
+                var result = new
+                {
+                    service = "BetaService",
+                    status = "Unhealthy",
+                    database = "Not Reachable",
+                    timestamp = DateTime.UtcNow
+                };
+
+                return StatusCode(500, result);
+            }
+        }
+
         // ✅ Helper method to log request and response
         private void LogRequestAndResponse(string method, string url, object? requestBody, int statusCode, object? responseData)
         {

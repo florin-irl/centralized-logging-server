@@ -77,5 +77,15 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AlphaService.Controllers.PhonesController",
+    "Method": "HealthCheck",
+    "RelativePath": "health",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

@@ -1,0 +1,33 @@
+heartbeat.monitors:
+  - type: http
+    id: alpha-health
+    name: AlphaService Health
+    schedule: "@every 10s"
+    urls: ["https://host.docker.internal:7065/health"]
+    check.response.status: 200
+    ssl.verification_mode: none
+
+  - type: http
+    id: beta-health
+    name: BetaService Health
+    schedule: "@every 10s"
+    urls: ["https://host.docker.internal:7058/api/health"]
+    check.response.status: 200
+    ssl.verification_mode: none
+
+  - type: http
+    id: charlie-health
+    name: CharlieService Health
+    schedule: "@every 10s"
+    urls: ["http://host.docker.internal:8082/api/phones/health"]
+    check.response.status: 200
+
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
+
+setup.kibana:
+  host: "kibana:5601"
+
+processors:
+  - add_observer_metadata:
+  - add_cloud_metadata:
