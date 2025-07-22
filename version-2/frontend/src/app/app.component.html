@@ -1,0 +1,39 @@
+<div class="page-container">
+  <!-- Alpha Service Form -->
+  <div class="card alpha-card">
+    <h3>Alpha Service</h3>
+
+    <label>Phone ID</label>
+    <input type="number" [(ngModel)]="alpha.phoneId" />
+
+    <label>Phone Number</label>
+    <input type="text" [(ngModel)]="alpha.phoneNr" />
+
+    <label>Number of Entries</label>
+    <input type="number" [(ngModel)]="alpha.entries" />
+
+    <div class="button-group">
+      <button class="btn clear" (click)="clearForm('alpha')">CLEAR</button>
+      <button class="btn send" (click)="sendData('alpha')">SEND</button>
+    </div>
+  </div>
+
+  <!-- Charlie Service Form -->
+  <div class="card charlie-card">
+    <h3>Charlie Service</h3>
+
+    <label>Phone ID</label>
+    <input type="number" [(ngModel)]="charlie.phoneId" />
+
+    <label>Phone Number</label>
+    <input type="text" [(ngModel)]="charlie.phoneNr" />
+
+    <label>Number of Entries</label>
+    <input type="number" [(ngModel)]="charlie.entries" />
+
+    <div class="button-group">
+      <button class="btn clear" (click)="clearForm('charlie')">CLEAR</button>
+      <button class="btn send" (click)="sendData('charlie')">SEND</button>
+    </div>
+  </div>
+</div>
