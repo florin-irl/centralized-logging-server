@@ -1,4 +1,5 @@
 filebeat.inputs:
+  #charlie
   - type: log
     enabled: true
     paths:

@@ -37,6 +37,7 @@ services:
         volumes:
             - ./logstash/pipeline:/usr/share/logstash/pipeline
             - ./logstash/logs:/logs
+            - ./nginx/logs:/nginx/logs:ro
         depends_on:
             - elasticsearch
 
@@ -48,6 +49,7 @@ services:
         volumes:
             - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
             - ./charlie/logs:/logs/charlie:ro
+            - ./nginx/logs:/nginx/logs:ro
         depends_on:
             - logstash
         restart: unless-stopped
