@@ -14,7 +14,7 @@ namespace AlphaService.Controllers
 
         public PhonesController(IHttpClientFactory httpClientFactory, IConfiguration configuration)
         {
-            _httpClient = httpClientFactory.CreateClient();
+            _httpClient = httpClientFactory.CreateClient("DefaultClient");
             _betaBaseUrl = configuration["BetaService:BaseUrl"];
         }
 

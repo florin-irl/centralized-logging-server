@@ -1,32 +1,44 @@
-﻿using Serilog;
+﻿using AlphaService.Helpers;
+using Elastic.CommonSchema.Serilog;
+using Serilog;
 using Serilog.Context;
 using Serilog.Events;
-using Serilog.Formatting.Json;
+// --> 1. ADD a using statement for the ECS formatter.
+using Serilog.Formatting.Elasticsearch;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ✅ STANDARDIZED JSON LOGGING
+// --> 2. REPLACE the logger configuration with the new ECS-compliant setup.
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
-    .MinimumLevel.Debug()
+    .MinimumLevel.Information()
     .Enrich.FromLogContext()
-    .Enrich.WithProperty("Service", "AlphaService")
-    .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName)
-    .WriteTo.Console(new JsonFormatter(renderMessage: true))
+    // Console sink now uses the ECS formatter
+    .WriteTo.Console(new EcsTextFormatter())
+    // File sink now uses the ECS formatter
     .WriteTo.File(
-        new JsonFormatter(renderMessage: true),
-        "Logs/alpha-service.json",
+        new EcsTextFormatter(),
+        "Logs/alpha-service-ecs.json", // New filename to reflect the new format
         rollingInterval: RollingInterval.Day
     )
-    .WriteTo.DurableHttpUsingFileSizeRolledBuffers(
-        requestUri: "http://localhost:8080",
-        batchFormatter: new Serilog.Sinks.Http.BatchFormatters.ArrayBatchFormatter()
+    // HTTP sink now uses the ECS formatter.
+    // The standard .Http() sink is simpler to configure with a formatter.
+    .WriteTo.Http(
+        "http://localhost:8080",
+        queueLimitBytes: null, // <-- The fix is here
+        textFormatter: new EcsTextFormatter()
     )
     .CreateLogger();
 
 builder.Host.UseSerilog();
 
-builder.Services.AddHttpClient();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddTransient<TraceIdDelegatingHandler>();
+
+
+builder.Services.AddHttpClient("DefaultClient")
+    .AddHttpMessageHandler<TraceIdDelegatingHandler>();
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -51,27 +63,36 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// ✅ STANDARDIZED REQUEST LOGGING
-app.UseSerilogRequestLogging(opts =>
-{
-    opts.EnrichDiagnosticContext = (diag, ctx) =>
-    {
-        diag.Set("Service", "AlphaService");
-        diag.Set("CorrelationId", ctx.TraceIdentifier);
-        diag.Set("RequestMethod", ctx.Request.Method);
-        diag.Set("RequestPath", ctx.Request.Path);
-    };
-});
+// --> 3. SIMPLIFY the request logger. The ECS formatter handles the details automatically.
+app.UseSerilogRequestLogging();
 
-// ✅ Correlation ID middleware (after SerilogRequestLogging)
+// --> 4. REPLACE the CorrelationId middleware with the new TraceId middleware.
 app.Use(async (context, next) =>
 {
-    LogContext.PushProperty("CorrelationId", context.TraceIdentifier);
-    await next();
+    string traceId;
+    // Try to get the trace ID from the NGINX header first.
+    if (context.Request.Headers.TryGetValue("X-Trace-Id", out var headerTraceId))
+    {
+        traceId = headerTraceId.ToString();
+    }
+    else
+    {
+        // Fallback to the default TraceIdentifier if the header is not present.
+        traceId = context.TraceIdentifier;
+    }
+
+    // --> THE FIX, PART 1: Store the ID in HttpContext.Items
+    context.Items["TraceId"] = traceId;
+
+    // Push to Serilog's LogContext so all *local* logs have the correct ID.
+    using (LogContext.PushProperty("trace.id", traceId))
+    {
+        await next.Invoke();
+    }
 });
 
-app.UseCors("AllowAll");
 
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 app.MapControllers();

@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\AlphaService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2E32D530-22A8-4685-89A6-364073B5DF31}|AlphaService.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\version-2\\alphaservice\\controllers\\phonescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E32D530-22A8-4685-89A6-364073B5DF31}|AlphaService.csproj|solutionrelative:controllers\\phonescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E32D530-22A8-4685-89A6-364073B5DF31}|AlphaService.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\version-2\\alphaservice\\helpers\\traceiddelegatinghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E32D530-22A8-4685-89A6-364073B5DF31}|AlphaService.csproj|solutionrelative:helpers\\traceiddelegatinghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E32D530-22A8-4685-89A6-364073B5DF31}|AlphaService.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\version-2\\alphaservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2E32D530-22A8-4685-89A6-364073B5DF31}|AlphaService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E32D530-22A8-4685-89A6-364073B5DF31}|AlphaService.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\version-2\\alphaservice\\controllers\\phonescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E32D530-22A8-4685-89A6-364073B5DF31}|AlphaService.csproj|solutionrelative:controllers\\phonescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E32D530-22A8-4685-89A6-364073B5DF31}|AlphaService.csproj|c:\\users\\roman\\desktop\\projects-cv\\centralized-logging-server\\version-2\\alphaservice\\models\\phone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,11 +38,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "TraceIdDelegatingHandler.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\AlphaService\\Helpers\\TraceIdDelegatingHandler.cs",
+              "RelativeDocumentMoniker": "Helpers\\TraceIdDelegatingHandler.cs",
+              "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\AlphaService\\Helpers\\TraceIdDelegatingHandler.cs",
+              "RelativeToolTip": "Helpers\\TraceIdDelegatingHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T13:16:01.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\AlphaService\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -50,20 +67,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "PhonesController.cs",
               "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\AlphaService\\Controllers\\PhonesController.cs",
               "RelativeDocumentMoniker": "Controllers\\PhonesController.cs",
               "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\AlphaService\\Controllers\\PhonesController.cs",
               "RelativeToolTip": "Controllers\\PhonesController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBkAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBAAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-18T12:46:17.803Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\AlphaService\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -75,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AlphaService.http",
               "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\AlphaService\\AlphaService.http",
               "RelativeDocumentMoniker": "AlphaService.http",
@@ -93,13 +110,14 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\AlphaService\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAowFwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T12:44:39.848Z"
+              "WhenOpened": "2025-07-18T12:44:39.848Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Phone.cs",
               "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\AlphaService\\Models\\Phone.cs",
               "RelativeDocumentMoniker": "Models\\Phone.cs",

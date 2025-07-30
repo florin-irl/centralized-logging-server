@@ -47,15 +47,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BetaService",
+              "Title": "BetaService.csproj",
               "DocumentMoniker": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\BetaService\\BetaService.csproj",
               "RelativeDocumentMoniker": "BetaService.csproj",
               "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\BetaService\\BetaService.csproj",
               "RelativeToolTip": "BetaService.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-30T12:17:26.234Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T12:17:26.234Z"
             },
             {
               "$type": "Document",

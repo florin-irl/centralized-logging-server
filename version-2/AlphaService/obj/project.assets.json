@@ -2,6 +2,51 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "Ben.Demystifier/0.4.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Metadata": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Ben.Demystifier.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Ben.Demystifier.dll": {}
+        }
+      },
+      "Elastic.CommonSchema/8.18.2": {
+        "type": "package",
+        "dependencies": {
+          "Ben.Demystifier": "0.4.1"
+        },
+        "compile": {
+          "lib/net8.0/Elastic.CommonSchema.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Elastic.CommonSchema.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Elastic.CommonSchema.Serilog/8.18.2": {
+        "type": "package",
+        "dependencies": {
+          "Elastic.CommonSchema": "8.18.2",
+          "Serilog": "4.1.0"
+        },
+        "compile": {
+          "lib/net8.0/Elastic.CommonSchema.Serilog.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Elastic.CommonSchema.Serilog.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/8.0.10": {
         "type": "package",
         "dependencies": {
@@ -369,6 +414,22 @@
           }
         }
       },
+      "Serilog.Formatting.Elasticsearch/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "2.12.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.Formatting.Elasticsearch.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.Formatting.Elasticsearch.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Serilog.Settings.Configuration/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -554,6 +615,19 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "System.Reflection.Metadata/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Reflection.Metadata.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reflection.Metadata.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Text.Encodings.Web/9.0.0": {
         "type": "package",
         "compile": {
@@ -599,6 +673,74 @@
     }
   },
   "libraries": {
+    "Ben.Demystifier/0.4.1": {
+      "sha512": "axFeEMfmEORy3ipAzOXG/lE+KcNptRbei3F0C4kQCdeiQtW+qJW90K5iIovITGrdLt8AjhNCwk5qLSX9/rFpoA==",
+      "type": "package",
+      "path": "ben.demystifier/0.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ben.demystifier.0.4.1.nupkg.sha512",
+        "ben.demystifier.nuspec",
+        "icon.png",
+        "lib/net45/Ben.Demystifier.dll",
+        "lib/netstandard2.0/Ben.Demystifier.dll",
+        "lib/netstandard2.1/Ben.Demystifier.dll",
+        "readme.md"
+      ]
+    },
+    "Elastic.CommonSchema/8.18.2": {
+      "sha512": "vTVCg+J4/TxnL93idVsO8/Rr7VkMaNRcTk6M+HI5wHgndp3a7uDvpqh7TdKeK5MMw/MHHHVFri2rAM1L4vfB/A==",
+      "type": "package",
+      "path": "elastic.commonschema/8.18.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "elastic.commonschema.8.18.2.nupkg.sha512",
+        "elastic.commonschema.nuspec",
+        "lib/net462/Elastic.CommonSchema.dll",
+        "lib/net462/Elastic.CommonSchema.pdb",
+        "lib/net462/Elastic.CommonSchema.xml",
+        "lib/net8.0/Elastic.CommonSchema.dll",
+        "lib/net8.0/Elastic.CommonSchema.pdb",
+        "lib/net8.0/Elastic.CommonSchema.xml",
+        "lib/netstandard2.0/Elastic.CommonSchema.dll",
+        "lib/netstandard2.0/Elastic.CommonSchema.pdb",
+        "lib/netstandard2.0/Elastic.CommonSchema.xml",
+        "lib/netstandard2.1/Elastic.CommonSchema.dll",
+        "lib/netstandard2.1/Elastic.CommonSchema.pdb",
+        "lib/netstandard2.1/Elastic.CommonSchema.xml",
+        "license.txt",
+        "nuget-icon.png"
+      ]
+    },
+    "Elastic.CommonSchema.Serilog/8.18.2": {
+      "sha512": "IsU74gndxrx72EHsEHwxzo8zJivwrGwP68BZMfwnQjWDYbT391d23WH1MUnvAkUlQQAki5TmBCJQ9D4iU/rRIw==",
+      "type": "package",
+      "path": "elastic.commonschema.serilog/8.18.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "elastic.commonschema.serilog.8.18.2.nupkg.sha512",
+        "elastic.commonschema.serilog.nuspec",
+        "lib/net462/Elastic.CommonSchema.Serilog.dll",
+        "lib/net462/Elastic.CommonSchema.Serilog.pdb",
+        "lib/net462/Elastic.CommonSchema.Serilog.xml",
+        "lib/net8.0/Elastic.CommonSchema.Serilog.dll",
+        "lib/net8.0/Elastic.CommonSchema.Serilog.pdb",
+        "lib/net8.0/Elastic.CommonSchema.Serilog.xml",
+        "lib/netstandard2.0/Elastic.CommonSchema.Serilog.dll",
+        "lib/netstandard2.0/Elastic.CommonSchema.Serilog.pdb",
+        "lib/netstandard2.0/Elastic.CommonSchema.Serilog.xml",
+        "lib/netstandard2.1/Elastic.CommonSchema.Serilog.dll",
+        "lib/netstandard2.1/Elastic.CommonSchema.Serilog.pdb",
+        "lib/netstandard2.1/Elastic.CommonSchema.Serilog.xml",
+        "license.txt",
+        "nuget-icon.png"
+      ]
+    },
     "Microsoft.AspNetCore.OpenApi/8.0.10": {
       "sha512": "kzYiW/IbSN0xittjplA8eN1wrNcRi3DMalYRrEuF2xyf2Y5u7cGCfgN1oNZ+g3aBQzMKTQwYsY1PeNmC+P0WnA==",
       "type": "package",
@@ -1391,6 +1533,20 @@
         "serilog.formatting.compact.nuspec"
       ]
     },
+    "Serilog.Formatting.Elasticsearch/10.0.0": {
+      "sha512": "N9FsqRnl+rQOD2ldJMbEgPySwFDkUB8s6PCj5e92ryektgyZNFze3R2c1nwGOz6jhJ2aIzBIBNDM69CCzdHO0w==",
+      "type": "package",
+      "path": "serilog.formatting.elasticsearch/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Serilog.Formatting.Elasticsearch.dll",
+        "lib/netstandard2.0/Serilog.Formatting.Elasticsearch.xml",
+        "serilog-sink-nuget.png",
+        "serilog.formatting.elasticsearch.10.0.0.nupkg.sha512",
+        "serilog.formatting.elasticsearch.nuspec"
+      ]
+    },
     "Serilog.Settings.Configuration/9.0.0": {
       "sha512": "4/Et4Cqwa+F88l5SeFeNZ4c4Z6dEAIKbu3MaQb2Zz9F/g27T5a3wvfMcmCOaAiACjfUb4A6wrlTVfyYUZk3RRQ==",
       "type": "package",
@@ -1664,6 +1820,30 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Reflection.Metadata/5.0.0": {
+      "sha512": "5NecZgXktdGg34rh1OenY1rFNDCI8xSjFr+Z4OU4cU06AQHUdRnIIEeWENu3Wl4YowbzkymAIMvi3WyK9U53pQ==",
+      "type": "package",
+      "path": "system.reflection.metadata/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Reflection.Metadata.dll",
+        "lib/net461/System.Reflection.Metadata.xml",
+        "lib/netstandard1.1/System.Reflection.Metadata.dll",
+        "lib/netstandard1.1/System.Reflection.Metadata.xml",
+        "lib/netstandard2.0/System.Reflection.Metadata.dll",
+        "lib/netstandard2.0/System.Reflection.Metadata.xml",
+        "lib/portable-net45+win8/System.Reflection.Metadata.dll",
+        "lib/portable-net45+win8/System.Reflection.Metadata.xml",
+        "system.reflection.metadata.5.0.0.nupkg.sha512",
+        "system.reflection.metadata.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Text.Encodings.Web/9.0.0": {
       "sha512": "e2hMgAErLbKyUUwt18qSBf9T5Y+SFAL3ZedM8fLupkVj8Rj2PZ9oxQ37XX2LF8fTO1wNIxvKpihD7Of7D/NxZw==",
       "type": "package",
@@ -1770,8 +1950,10 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Elastic.CommonSchema.Serilog >= 8.18.2",
       "Microsoft.AspNetCore.OpenApi >= 8.0.10",
       "Serilog.AspNetCore >= 9.0.0",
+      "Serilog.Formatting.Elasticsearch >= 10.0.0",
       "Serilog.Sinks.File >= 7.0.0",
       "Serilog.Sinks.Http >= 9.1.1",
       "Swashbuckle.AspNetCore >= 6.6.2"
@@ -1822,6 +2004,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Elastic.CommonSchema.Serilog": {
+            "target": "Package",
+            "version": "[8.18.2, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[8.0.10, )"
@@ -1829,6 +2015,10 @@
           "Serilog.AspNetCore": {
             "target": "Package",
             "version": "[9.0.0, )"
+          },
+          "Serilog.Formatting.Elasticsearch": {
+            "target": "Package",
+            "version": "[10.0.0, )"
           },
           "Serilog.Sinks.File": {
             "target": "Package",

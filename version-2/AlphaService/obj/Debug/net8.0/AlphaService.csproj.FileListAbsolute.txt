@@ -63,3 +63,7 @@ C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\AlphaSer
 C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\AlphaService\bin\Debug\net8.0\Logs\alpha-service20250720.json
 C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\AlphaService\bin\Debug\net8.0\Logs\alpha-service20250722.json
 C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\AlphaService\bin\Debug\net8.0\Logs\alpha-service20250723.json
+C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\AlphaService\bin\Debug\net8.0\Ben.Demystifier.dll
+C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\AlphaService\bin\Debug\net8.0\Elastic.CommonSchema.dll
+C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\AlphaService\bin\Debug\net8.0\Elastic.CommonSchema.Serilog.dll
+C:\Users\roman\Desktop\projects-cv\centralized-logging-server\version-2\AlphaService\bin\Debug\net8.0\Serilog.Formatting.Elasticsearch.dll

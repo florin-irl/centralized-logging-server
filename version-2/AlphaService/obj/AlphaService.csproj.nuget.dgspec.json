@@ -46,6 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Elastic.CommonSchema.Serilog": {
+              "target": "Package",
+              "version": "[8.18.2, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.10, )"
@@ -53,6 +57,10 @@
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Serilog.Formatting.Elasticsearch": {
+              "target": "Package",
+              "version": "[10.0.0, )"
             },
             "Serilog.Sinks.File": {
               "target": "Package",
