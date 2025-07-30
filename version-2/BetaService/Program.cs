@@ -1,39 +1,40 @@
 ﻿using Serilog;
 using Serilog.Context;
 using Serilog.Events;
-using Serilog.Formatting.Json;
+// This is the formatter, which is correct
+// This package provides the .TCPSink() method
 using BetaService.Data;
 using Microsoft.EntityFrameworkCore;
+using Serilog.Formatting.Elasticsearch;
 using Serilog.Sinks.Network;
+using Elastic.CommonSchema.Serilog;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Final Logger Configuration
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
-    .MinimumLevel.Debug()
+    .MinimumLevel.Information()
     .Enrich.FromLogContext()
-    .Enrich.WithProperty("Service", "BetaService")
-    .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName)
-    .WriteTo.Console(new JsonFormatter(renderMessage: true))
-    .WriteTo.File(
-        new JsonFormatter(renderMessage: true),
-        "Logs/beta-service.json",
-        rollingInterval: RollingInterval.Day
+    .WriteTo.Console(new EcsTextFormatter())
+    .WriteTo.File(new EcsTextFormatter(), "Logs/beta-service-ecs.json", rollingInterval: RollingInterval.Day)
+    // --> Using the TCPSink from your chosen package, with the ECS formatter
+    .WriteTo.TCPSink(
+        "tcp://localhost:5000",
+        textFormatter: new EcsTextFormatter()
     )
-    .WriteTo.TCPSink("tcp://localhost:5000")
     .CreateLogger();
 
 builder.Host.UseSerilog();
+
+// --- The rest of your file remains the same ---
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddControllers()
-    .AddJsonOptions(opts =>
-    {
-        // ✅ FORCE PascalCase like Alpha
-        opts.JsonSerializerOptions.PropertyNamingPolicy = null;
-    });
+    .AddJsonOptions(opts => { opts.JsonSerializerOptions.PropertyNamingPolicy = null; });
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -48,20 +49,18 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseSerilogRequestLogging(opts =>
-{
-    opts.EnrichDiagnosticContext = (diag, ctx) =>
-    {
-        diag.Set("Service", "BetaService");
-        diag.Set("CorrelationId", ctx.TraceIdentifier);
-        diag.Set("RequestMethod", ctx.Request.Method);
-        diag.Set("RequestPath", ctx.Request.Path);
-    };
-});
+app.UseSerilogRequestLogging();
 
 app.Use(async (context, next) =>
 {
-    LogContext.PushProperty("CorrelationId", context.TraceIdentifier);
+    if (context.Request.Headers.TryGetValue("X-Trace-Id", out var traceId))
+    {
+        LogContext.PushProperty("trace.id", traceId.ToString());
+    }
+    else
+    {
+        LogContext.PushProperty("trace.id", context.TraceIdentifier);
+    }
     await next();
 });
 

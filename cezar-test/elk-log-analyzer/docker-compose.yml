@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+    elasticsearch:
+        image: docker.elastic.co/elasticsearch/elasticsearch:8.14.1
+        container_name: elasticsearch-portable
+        environment:
+            - discovery.type=single-node
+            - xpack.security.enabled=false
+            - "ES_JAVA_OPTS=-Xms512m -Xmx512m" # Limits memory usage for local testing
+        ports:
+            - "9200:9200"
+        networks:
+            - logging-net-portable
+        volumes:
+            - es-data:/usr/share/elasticsearch/data
+
+    kibana:
+        image: docker.elastic.co/kibana/kibana:8.14.1
+        container_name: kibana-portable
+        ports:
+            - "5601:5601"
+        environment:
+            - ELASTICSEARCH_HOSTS=http://elasticsearch-portable:9200
+        depends_on:
+            - elasticsearch
+        networks:
+            - logging-net-portable
+
+    logstash:
+        image: docker.elastic.co/logstash/logstash:8.14.1
+        container_name: logstash-portable
+        # The ports section is not strictly necessary for file input, but is kept for consistency
+        ports:
+            - "5044:5044"
+            - "5000:5000/tcp"
+            - "5000:5000/udp"
+            - "9600:9600"
+        volumes:
+            # Mounts the Logstash configuration file into the container
+            - ./logstash-config/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+            # Mounts the folder with the log file into the container for Logstash to read
+            - ./log-data:/var/log/host-data
+        depends_on:
+            - elasticsearch
+        networks:
+            - logging-net-portable
+
+networks:
+    logging-net-portable:
+        driver: bridge
+
+volumes:
+    es-data:
+        driver: local

@@ -37,6 +37,7 @@ services:
         volumes:
             - ./logstash/pipeline:/usr/share/logstash/pipeline
             - ./logstash/logs:/logs
+            - ./logstash/data:/usr/share/logstash/data
             - ./nginx/logs:/nginx/logs:ro
         depends_on:
             - elasticsearch
