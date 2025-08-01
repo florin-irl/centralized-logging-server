@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <!-- Core ASP.NET & EF Core Packages -->
+    <PackageReference Include="Elastic.Apm.NetCoreAll" Version="1.32.2" />
     <PackageReference Include="Elastic.CommonSchema.Serilog" Version="8.6.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.7" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />

@@ -30,15 +30,29 @@ services:
         image: docker.elastic.co/logstash/logstash:8.13.0
         container_name: logstash
         ports:
-            - "5044:5044" # Beats input
-            - "5000:5000" # TCP input (legacy)
-            - "9600:9600" # Logstash monitoring
-            - "8080:8080" # HTTP input (legacy)
+            - "5044:5044"
+            - "5000:5000"
+            - "9600:9600"
+            - "8080:8080"
         volumes:
+            # This line mounts your Logstash pipeline configuration. It's correct.
             - ./logstash/pipeline:/usr/share/logstash/pipeline
-            - ./logstash/logs:/logs
-            - ./logstash/data:/usr/share/logstash/data
-            - ./nginx/logs:/nginx/logs:ro
+
+            # --> THE CHANGES ARE HERE <--
+            # We are mapping each Windows log directory to a specific path inside the container.
+
+            # Alpha Logs -> /logs/alpha
+            - C:/Users/roman/Desktop/projects-cv/centralized-logging-server/version-2/AlphaService/Logs:/logs/alpha:ro
+
+            # Beta Logs -> /logs/beta
+            - C:/Users/roman/Desktop/projects-cv/centralized-logging-server/version-2/BetaService/Logs:/logs/beta:ro
+
+            # Charlie Logs -> /logs/charlie
+            - C:/Users/roman/Desktop/projects-cv/centralized-logging-server/version-2/charlie/logs:/logs/charlie:ro
+
+            # Delta (NGINX) Logs -> /logs/delta
+            - C:/Users/roman/Desktop/projects-cv/centralized-logging-server/version-2/nginx/logs:/logs/delta:ro
+
         depends_on:
             - elasticsearch
 

@@ -1,0 +1,36 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - "/logs/alpha/*.json"
+    fields: { service: "alpha" }
+    json.keys_under_root: true
+    json.add_error_key: true
+
+  - type: log
+    enabled: true
+    paths:
+      - "/logs/beta/*.json"
+    fields: { service: "beta" }
+    json.keys_under_root: true
+    json.add_error_key: true
+
+  - type: log
+    enabled: true
+    paths:
+      - "/logs/charlie/*.json"
+    fields: { service: "charlie" }
+    json.keys_under_root: true
+    json.add_error_key: true
+
+  - type: log
+    enabled: true
+    paths:
+      - "/logs/delta/*.json"
+    fields: { service: "delta" }
+    json.keys_under_root: true
+    json.add_error_key: true
+
+# This tells Filebeat where to send the logs it collects.
+output.logstash:
+  hosts: ["logstash:5044"]

@@ -46,6 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Elastic.Apm.NetCoreAll": {
+              "target": "Package",
+              "version": "[1.32.2, )"
+            },
             "Elastic.CommonSchema.Serilog": {
               "target": "Package",
               "version": "[8.18.2, )"

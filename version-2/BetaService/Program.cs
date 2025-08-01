@@ -8,9 +8,12 @@ using Microsoft.EntityFrameworkCore;
 using Serilog.Formatting.Elasticsearch;
 using Serilog.Sinks.Network;
 using Elastic.CommonSchema.Serilog;
+using Elastic.Apm.NetCoreAll;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseAllElasticApm();
 
 // Final Logger Configuration
 Log.Logger = new LoggerConfiguration()

@@ -1,4 +1,5 @@
 ﻿using AlphaService.Helpers;
+using Elastic.Apm.NetCoreAll;
 using Elastic.CommonSchema.Serilog;
 using Serilog;
 using Serilog.Context;
@@ -7,6 +8,8 @@ using Serilog.Events;
 using Serilog.Formatting.Elasticsearch;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseAllElasticApm();
 
 // --> 2. REPLACE the logger configuration with the new ECS-compliant setup.
 Log.Logger = new LoggerConfiguration()
