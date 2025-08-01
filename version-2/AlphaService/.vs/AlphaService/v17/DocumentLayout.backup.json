@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "Helpers\\TraceIdDelegatingHandler.cs",
               "ToolTip": "C:\\Users\\roman\\Desktop\\projects-cv\\centralized-logging-server\\version-2\\AlphaService\\Helpers\\TraceIdDelegatingHandler.cs",
               "RelativeToolTip": "Helpers\\TraceIdDelegatingHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA+wBoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T13:16:01.474Z",
               "EditorCaption": ""
@@ -75,8 +75,7 @@
               "RelativeToolTip": "Controllers\\PhonesController.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAwBAAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T12:46:17.803Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-18T12:46:17.803Z"
             },
             {
               "$type": "Document",
@@ -112,8 +111,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAAowFwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T12:44:39.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-18T12:44:39.848Z"
             },
             {
               "$type": "Document",

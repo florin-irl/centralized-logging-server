@@ -1,51 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN">
     <Appenders>
-        <!-- ✅ Console output -->
+        <!-- Console Appender using the EcsLayout -->
         <Console name="Console" target="SYSTEM_OUT">
-            <JsonLayout
-                    complete="false"
-                    compact="true"
-                    eventEol="true"
-                    properties="true"
-                    objectMessageAsJsonObject="true"
-                    includeStacktrace="true"
-                    includeThreadContext="true"
-                    includeTimeMillis="true"
-                    timestampFormat="ISO8601">
-                <KeyValuePair key="@version" value="1"/>
-                <KeyValuePair key="service" value="CharlieService"/>
-                <KeyValuePair key="input_source" value="filebeat"/>
-            </JsonLayout>
+            <EcsLayout serviceName="CharlieService"/>
         </Console>
 
-        <!-- ✅ File output -->
-        <File name="JsonFile" fileName="logs/charlie-service.log" append="true">
-            <JsonLayout
-                    complete="false"
-                    compact="true"
-                    eventEol="true"
-                    properties="true"
-                    objectMessageAsJsonObject="true"
-                    includeStacktrace="true"
-                    includeThreadContext="true"
-                    includeTimeMillis="true"
-                    timestampFormat="ISO8601">
-                <KeyValuePair key="@version" value="1"/>
-                <KeyValuePair key="service" value="CharlieService"/>
-                <KeyValuePair key="input_source" value="filebeat"/>
-            </JsonLayout>
-        </File>
+        <!--
+          THIS IS THE MODIFIED APPENDER
+          It now rolls over daily and adds the date to the filename.
+        -->
+        <RollingFile name="EcsFile"
+                     fileName="logs/charlie-service-ecs.log"
+                     filePattern="logs/charlie-service-ecs-%d{yyyyMMdd}.json">
+            <EcsLayout serviceName="CharlieService"/>
+            <Policies>
+                <!-- Rollover every day -->
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+            <!-- Optional: Keep only the last 7 days of logs -->
+            <DefaultRolloverStrategy max="7"/>
+        </RollingFile>
+
     </Appenders>
 
     <Loggers>
         <Logger name="com.example.charlie" level="info" additivity="false">
             <AppenderRef ref="Console"/>
-            <AppenderRef ref="JsonFile"/>
+            <AppenderRef ref="EcsFile"/>
         </Logger>
 
         <Root level="warn">
             <AppenderRef ref="Console"/>
+            <AppenderRef ref="EcsFile"/>
         </Root>
     </Loggers>
 </Configuration>

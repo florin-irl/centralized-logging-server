@@ -28,10 +28,12 @@ export class AppComponent {
     const form = service === 'alpha' ? this.alpha : this.charlie;
     const entries = this.generateEntries(form);
 
+    // --> THIS IS THE CORRECTED CODE
+    // We now use relative paths that will be sent to our NGINX server.
     const url =
       service === 'alpha'
-        ? 'https://localhost:7065/api/phones' // ✅ FIXED URL for Alpha
-        : 'http://localhost:8082/api/phones';
+        ? '/alpha/api/phones'  // This goes to http://localhost:8087/alpha/api/phones
+        : '/charlie/api/phones'; // This goes to http://localhost:8087/charlie/api/phones
 
     entries.forEach((phone) => {
       this.http.post(url, phone).subscribe({
@@ -44,6 +46,7 @@ export class AppComponent {
 
     alert(`${service.toUpperCase()} data sent successfully!`);
   }
+
 
 
   private generateEntries(form: { phoneId: number; phoneNr: string; entries: number }) {
