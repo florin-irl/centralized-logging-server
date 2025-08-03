@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "IJZKkNitjJv5noATixThLY6pAAamwERa79UC0JrFVO0=",
-  "Source": "AlphaService",
-  "BasePath": "_content/AlphaService",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"Rowl9sR2ifhrmttIb7PK5QPQ6K4D7GBGD5wI9LZcCoM=","Source":"AlphaService","BasePath":"_content/AlphaService","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
